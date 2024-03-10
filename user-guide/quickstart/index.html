@@ -1,0 +1,1591 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A toolkit to work with ISO Week date format">
+      
+      
+        <meta name="author" content="Francesco Bruzzesi">
+      
+      
+        <link rel="canonical" href="https://fbruzzesi.github.io/iso-week-date/user-guide/quickstart/">
+      
+      
+        <link rel="prev" href="../features/">
+      
+      
+        <link rel="next" href="../dataframe-modules/">
+      
+      
+      <link rel="icon" href="../../img/iso-week-date-logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Quickstart - ISO Week date</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quickstart" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ISO Week date" class="md-header__button md-logo" aria-label="ISO Week date" data-md-component="logo">
+      
+  <img src="../../img/iso-week-date-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ISO Week date
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fbruzzesi/iso-week-date" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FBruzzesi/iso-week-date
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../features/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/baseisoweek/" class="md-tabs__link">
+          
+  
+    
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ISO Week date" class="md-nav__button md-logo" aria-label="ISO Week date" data-md-component="logo">
+      
+  <img src="../../img/iso-week-date-logo.svg" alt="logo">
+
+    </a>
+    ISO Week date
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fbruzzesi/iso-week-date" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FBruzzesi/iso-week-date
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quickstart
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common functionalities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common functionalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsing-from-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsing from types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-to-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion to types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition-and-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition and subtraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoweek-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsoWeek specific
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IsoWeek specific">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#days-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Days property
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weeksout-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weeksout method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoweekdate-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsoWeekDate specific
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IsoWeekDate specific">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daysout-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daysout method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-custom-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with custom offset
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe-modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataframe modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pydantic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Pydantic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/baseisoweek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/isoweek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IsoWeek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/isoweekdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IsoWeekDate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pandas_utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/polars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    polars_utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/mixins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mixin's
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common functionalities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common functionalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsing-from-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsing from types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-to-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion to types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition-and-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition and subtraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoweek-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsoWeek specific
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IsoWeek specific">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#days-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Days property
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weeksout-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weeksout method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contains method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoweekdate-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsoWeekDate specific
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IsoWeekDate specific">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daysout-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daysout method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-custom-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with custom offset
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/fbruzzesi/iso-week-date/edit/main/docs/user-guide/quickstart.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/fbruzzesi/iso-week-date/raw/main/docs/user-guide/quickstart.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h1>
+<p>In this section we will see how to work with the different modules of the library.</p>
+<p>For a high level overview of the features provided by the <code>iso-week-date</code> package, see the <a href="../features/">features</a> section.</p>
+<p>For a detailed description of the API, see the API Reference section.</p>
+<h2 id="common-functionalities">Common functionalities<a class="headerlink" href="#common-functionalities" title="Permanent link">&para;</a></h2>
+<p>As mentioned in the <a href="../features/">features</a> section, the <a href="../../api/isoweek/"><code>IsoWeek</code></a> and <a href="../../api/isoweekdate/"><code>IsoWeekDate</code></a> classes share a lot of functionalities and methods, since they both inherit from the same abstract base class, namely <a href="../../api/baseisoweek/"><code>BaseIsoWeek</code></a>.</p>
+<p>Therefore we will focus first on the common functionalities, and then showcase the unique features of each class.</p>
+<p>Both these classes are available from the top-level module:</p>
+<div class="highlight"><span class="filename">imports</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">iso_week_date</span> <span class="kn">import</span> <span class="n">IsoWeek</span><span class="p">,</span> <span class="n">IsoWeekDate</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</code></pre></div>
+<h3 id="parsing-from-types">Parsing from types<a class="headerlink" href="#parsing-from-types" title="Permanent link">&para;</a></h3>
+<p>An instance can be initialized from parsing multiple types:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">directly</label><label for="__tabbed_1_2"><code>from_string</code></label><label for="__tabbed_1_3"><code>from_compact</code></label><label for="__tabbed_1_4"><code>from_date</code></label><label for="__tabbed_1_5"><code>from_datetime</code></label><label for="__tabbed_1_6"><code>from_values</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="p">(</span><span class="s2">&quot;2023-W01-1&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="s2">&quot;2023-W01-1&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_compact</span><span class="p">(</span><span class="s2">&quot;2023W01&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">from_compact</span><span class="p">(</span><span class="s2">&quot;2023W01-1&quot;</span><span class="p">)</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_date</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">from_date</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_datetime</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">from_datetime</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">iw</span> <span class="o">=</span> <span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_values</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2023</span><span class="p">,</span> <span class="n">week</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2023-W01&quot;)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">iwd</span> <span class="o">=</span> <span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">from_values</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">weekday</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-1&quot;)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="conversion-to-types">Conversion to types<a class="headerlink" href="#conversion-to-types" title="Permanent link">&para;</a></h3>
+<p>On the "opposite" direction, an instance can be converted to multiple types:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>to_string</code></label><label for="__tabbed_2_2"><code>to_compact</code></label><label for="__tabbed_2_3"><code>to_date</code></label><label for="__tabbed_2_4"><code>to_datetime</code></label><label for="__tabbed_2_5"><code>to_values</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  <span class="c1"># &quot;2023-W01&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  <span class="c1"># &quot;2023-W01-1&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_compact</span><span class="p">()</span>  <span class="c1"># &quot;2023W01&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">to_compact</span><span class="p">()</span>  <span class="c1"># &quot;2023W011&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_date</span><span class="p">()</span>  <span class="c1"># date(2023, 1, 2)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">to_date</span><span class="p">()</span>  <span class="c1"># date(2023, 1, 2)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">()</span>  <span class="c1"># datetime(2023, 1, 2, 0, 0)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">()</span>  <span class="c1"># datetime(2023, 1, 2, 0, 0)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_values</span><span class="p">()</span>  <span class="c1"># (2023, 1)  # (year, weeknumber)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">to_values</span><span class="p">()</span>  <span class="c1"># (2023, 1, 1)  # (year, weeknumber, weekday)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">IsoWeek to date/datetime</p>
+<p>Remark that <a href="../../api/isoweek/#iso_week_date.isoweek.IsoWeek.to_date"><code>IsoWeek.to_date</code></a> and <a href="../../api/isoweek/#iso_week_date.isoweek.IsoWeek.to_datetime"><code>IsoWeek.to_datetime</code></a> methods accept an optional <code>weekday</code> argument, which defaults to <code>1</code> (first weekday), and can be used to get the date of a specific day of the week:</p>
+<div class="highlight"><span class="filename">specific weekday</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_date</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># date(2023, 1, 3)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">iw</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># datetime(2023, 1, 4, 0, 0)</span>
+</code></pre></div>
+</div>
+<h3 id="comparison-operations">Comparison operations<a class="headerlink" href="#comparison-operations" title="Permanent link">&para;</a></h3>
+<p>Both classes inherit all the comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>), which can be used to compare two instances of the same class:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">iw</span> <span class="o">==</span> <span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span> <span class="c1"># True</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">iw</span> <span class="o">==</span> <span class="n">iwd</span> <span class="c1"># False</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">iw</span> <span class="o">&lt;</span> <span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2023-W02&quot;</span><span class="p">)</span> <span class="c1"># True</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">iwd</span> <span class="o">&gt;</span> <span class="n">IsoWeekDate</span><span class="p">(</span><span class="s2">&quot;2023-W02-2&quot;</span><span class="p">)</span> <span class="c1"># False</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">iw</span> <span class="o">&lt;</span> <span class="n">iwd</span> <span class="c1"># TypeError</span>
+</code></pre></div>
+<p>To compare two instances we first check that they have the same parent class, then check they share the same offset value, and
+finally we compare their string value exploiting the lexical order of the ISO Week date format.</p>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>year</code></label><label for="__tabbed_3_2"><code>week</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">year</span>  <span class="c1"># 2023</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">year</span>  <span class="c1"># 2023</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">week</span>  <span class="c1"># 1</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">iwd</span><span class="o">.</span><span class="n">week</span>  <span class="c1"># 1</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="addition-and-subtraction">Addition and subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permanent link">&para;</a></h3>
+<p>Classes inheriting from <code>BaseIsoWeek</code> have to implement:</p>
+<ul>
+<li>addition with <code>int</code> and <code>timedelta</code> types</li>
+<li>
+<p class="annotate">subtraction with <code>int</code>, <code>timedelta</code> and <code>Self</code> types (1)</p>
+<ol>
+<li>The <code>Self</code> type is the class itself, i.e. <code>IsoWeek</code> for <code>IsoWeek</code> and <code>IsoWeekDate</code> for <code>IsoWeekDate</code>.</li>
+</ol>
+</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">operation with <code>int</code>s</p>
+<p>The two classes treat <code>int</code> type differently when performing addition and subtraction operations.
+Namely:</p>
+<ul>
+<li>For <code>IsoWeek</code> it is interpreted as <strong>weeks</strong></li>
+<li>For <code>IsoWeekDate</code> it is interpreted as <strong>days</strong></li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Addition <code>+</code></label><label for="__tabbed_4_2">Subtraction <code>-</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">iw</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># IsoWeek(&quot;2023-W02&quot;)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">iw</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">weeks</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2023-W03&quot;)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iw</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># (IsoWeek(&quot;2023-W02&quot;), IsoWeek(&quot;2023-W03&quot;), IsoWeek(&quot;2023-W04&quot;))</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">iwd</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-2&quot;)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">iwd</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># IsoWeekDate(&quot;2023-W01-3&quot;)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">iw</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># IsoWeek(&quot;2022-W52&quot;)</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">iw</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">weeks</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># IsoWeek(&quot;2022-W51&quot;)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">iw</span> <span class="o">-</span> <span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2022-W52&quot;</span><span class="p">)</span>  <span class="c1"># 1</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iw</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># (IsoWeek(&quot;2022-W52&quot;), IsoWeek(&quot;2022-W51&quot;), IsoWeek(&quot;2022-W50&quot;))</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">iwd</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># IsoWeekDate(&quot;2022-W52-7&quot;)</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">iwd</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># IsoWeekDate(&quot;2022-W52-6&quot;)</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="n">iwd</span> <span class="o">-</span> <span class="n">IsoWeekDate</span><span class="p">(</span><span class="s2">&quot;2022-W52-3&quot;</span><span class="p">)</span> <span class="c1"># 5</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="range-method">Range method<a class="headerlink" href="#range-method" title="Permanent link">&para;</a></h3>
+<p><code>BaseIsoWeek</code> implements a classmethod to create range between two "ISO Week"-like objects that inherit from it and
+implement addition with <code>int</code> and subtraction between ISO Week objects.</p>
+<div class="highlight"><span class="filename">range classmethod</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">IsoWeek</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2023-W07&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">as_str</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1"># (&#39;2023-W01&#39;, &#39;2023-W03&#39;, &#39;2023-W05&#39;, &#39;2023-W07&#39;)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">IsoWeekDate</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2023-W01-1&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2023-W03-3&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">as_str</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="c1"># (&#39;2023-W01-1&#39;, &#39;2023-W01-4&#39;, &#39;2023-W01-7&#39;, &#39;2023-W02-3&#39;, &#39;2023-W02-6&#39;, &#39;2023-W03-2&#39;)</span>
+</code></pre></div>
+<h2 id="isoweek-specific"><a href="../../api/isoweek/"><code>IsoWeek</code></a> specific<a class="headerlink" href="#isoweek-specific" title="Permanent link">&para;</a></h2>
+<p>In addition to the common functionalities, the <code>IsoWeek</code> class provides additional properties and methods.</p>
+<h3 id="days-property">Days property<a class="headerlink" href="#days-property" title="Permanent link">&para;</a></h3>
+<p>The <code>days</code> property returns a tuple of <code>date</code>s in the given week:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">days</span> <span class="c1"># (date(2023, 1, 2), date(2023, 1, 3), ..., date(2023, 1, 8))</span>
+</code></pre></div>
+<h3 id="weeksout-method">Weeksout method<a class="headerlink" href="#weeksout-method" title="Permanent link">&para;</a></h3>
+<p>The <code>weeksout</code> method generates a list of weeks that are <em>n_weeks</em> after the given week:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iw</span><span class="o">.</span><span class="n">weeksout</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># (&#39;2023-W02&#39;, &#39;2023-W03&#39;, &#39;2023-W04&#39;)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iw</span><span class="o">.</span><span class="n">weeksout</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">as_str</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># (IsoWeek(&#39;2023-W02&#39;), IsoWeek(&#39;2023-W04&#39;), IsoWeek(&#39;2023-W06&#39;))</span>
+</code></pre></div>
+<h3 id="contains-method">Contains method<a class="headerlink" href="#contains-method" title="Permanent link">&para;</a></h3>
+<p>The <code>contains</code> method checks if a (iterable of) week(s), string(s) and/or date(s) is contained in the given week:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">iw</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span> <span class="c1"># True</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">iw</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># False</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">iw</span><span class="o">.</span><span class="n">contains</span><span class="p">((</span><span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">),</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span> <span class="c1"># (True, False, True)</span>
+</code></pre></div>
+<p>This is achieved by implementing the <code>__contains__</code> method, which is called when using the <code>in</code> operator:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">iw</span> <span class="c1"># False</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">iw</span> <span class="c1"># True</span>
+</code></pre></div>
+<h2 id="isoweekdate-specific"><a href="../../api/isoweekdate/"><code>IsoWeekDate</code></a> specific<a class="headerlink" href="#isoweekdate-specific" title="Permanent link">&para;</a></h2>
+<p>In a similar fashion, <code>IsoWeekDate</code> class provides additional properties and methods.</p>
+<h3 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">&para;</a></h3>
+<p>We have two additional properties:</p>
+<ul>
+<li><code>isoweek</code> returns the ISO Week of the given date (as string)</li>
+<li><code>day</code>: returns the weekday as integer</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>isoweek</code></label><label for="__tabbed_5_2"><code>day</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">iwd</span><span class="o">.</span><span class="n">isoweek</span>  <span class="c1"># &quot;2023-W01&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">iwd</span><span class="o">.</span><span class="n">day</span>  <span class="c1"># 1</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="daysout-method">Daysout method<a class="headerlink" href="#daysout-method" title="Permanent link">&para;</a></h3>
+<p>The <code>daysout</code> method generates a list of dates that are <em>n_days</em> after the given date:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iwd</span><span class="o">.</span><span class="n">daysout</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># (&#39;2023-W01-2&#39;, &#39;2023-W01-3&#39;, &#39;2023-W01-4&#39;)</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">iwd</span><span class="o">.</span><span class="n">daysout</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">as_str</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="c1"># (IsoWeekDate(&#39;2023-W01-2&#39;), IsoWeekDate(&#39;2023-W01-5&#39;), IsoWeekDate(&#39;2023-W02-1&#39;))</span>
+</code></pre></div>
+<h2 id="working-with-custom-offset">Working with <em>custom offset</em><a class="headerlink" href="#working-with-custom-offset" title="Permanent link">&para;</a></h2>
+<p>The "standard" ISO Week starts on Monday and end on Sunday. However there are cases in which one may require a <em>shift</em> in the starting day of a week.</p>
+<p>The <code>IsoWeek</code> class has one class attribute called <code>offset_</code> which can be used to define a custom offset for the week.</p>
+<div class="highlight"><span class="filename">custom offset</span><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">class</span> <span class="nc">MyWeek</span><span class="p">(</span><span class="n">IsoWeek</span><span class="p">):</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="sd">    MyWeek class is a IsoWeek with custom offset of -2 days.</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="sd">    Therefore MyWeek starts the Saturday before the &quot;standard&quot; ISO week.</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    <span class="n">offset_</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>This is all that is required to work with a custom shifted week.</p>
+<p>Now the same date may be "mapped" to different ISO Weeks depending on the offset:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">IsoWeek</span><span class="o">.</span><span class="n">from_date</span><span class="p">(</span><span class="n">_date</span><span class="p">)</span>  <span class="c1"># IsoWeek(2022-W52)</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">MyWeek</span><span class="o">.</span><span class="n">from_date</span><span class="p">(</span><span class="n">_date</span><span class="p">)</span>  <span class="c1"># MyWeek(2023-W01)</span>
+</code></pre></div>
+<p>Or we can see that the same week starts on different dates:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">IsoWeek</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">nth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># date(2023, 1, 2)</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">MyWeek</span><span class="p">(</span><span class="s2">&quot;2023-W01&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">nth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># date(2022, 12, 31)</span>
+</code></pre></div>
+<p>Similarly we can define a custom offset for the <code>IsoWeekDate</code> class:</p>
+<div class="highlight"><span class="filename">custom offset</span><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">class</span> <span class="nc">MyWeekDate</span><span class="p">(</span><span class="n">IsoWeekDate</span><span class="p">):</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="sd">    MyWeekDate class is a IsoWeekDate with custom offset of -2 days.</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="sd">    Therefore MyWeekDate starts the Saturday before the &quot;standard&quot; ISO week.</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    <span class="n">offset_</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>All the functionalities still work as expected, just keep in mind that comparisons and arithmetic operations will be available only on instances with the same offset.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../features/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Features">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Features
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dataframe-modules/" class="md-footer__link md-footer__link--next" aria-label="Next: Dataframe modules">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Dataframe modules
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/fbruzzesi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/francesco-bruzzesi/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/iso-week-date/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "navigation.footer", "navigation.top", "navigation.tracking", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "content.tabs.link", "search.suggest", "search.highlight", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
