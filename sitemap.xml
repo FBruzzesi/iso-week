@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/contribute/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/installation/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/baseisoweek/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/isoweek/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/isoweekdate/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/mixins/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/pandas/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/polars/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/api/pydantic/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/user-guide/dataframe-modules/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/user-guide/features/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/user-guide/internals/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/user-guide/pydantic/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fbruzzesi.github.io/iso-week-date/user-guide/quickstart/</loc>
-         <lastmod>2024-04-29</lastmod>
+         <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
